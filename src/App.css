@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  background-color: whitesmoke;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #282c34;
+  user-select: none;
 }
 
 .App-logo {
@@ -13,17 +21,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -34,5 +31,100 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.hideScroll::-webkit-scrollbar {
+  display: none !important;
+}
+
+.scroll-indicator-container {
+  position: relative;
+  overflow-x: auto;
+}
+
+.scroll-indicator {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+}
+
+.scroll-indicator::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 17.3px;
+  border-color: transparent transparent transparent #000;
+  transform: rotate(90deg);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.glass-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.image-container {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+.image-container-side {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+.video-container {
+  width: 65%;
+}
+.video-inner {
+  object-fit: cover;
+  height: 60%;
+  width: 100%;
+}
+.side-container {
+  width: 35%;
+  height: 93vh;
+}
+.image-title {
+  position: absolute;
+  color: #000;
+  bottom: 50;
+  top: auto;
+}
+.h-v {
+  height: 28rem !important;
+}
+@media screen and (max-width: 767px) {
+  .element-to-hide {
+    display: none;
+  }
+  .video-container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .h-v {
+    height: auto !important;
+  }
+  .mobile-w {
+    padding: 0.3rem !important;
+    margin: 2.25rem;
+    margin-top: 4rem !important;
   }
 }
