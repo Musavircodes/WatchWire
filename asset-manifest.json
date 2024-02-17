@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WatchWire/static/css/main.fe1564a5.css",
+    "main.js": "/WatchWire/static/js/main.0dd09420.js",
+    "index.html": "/WatchWire/index.html",
+    "main.fe1564a5.css.map": "/WatchWire/static/css/main.fe1564a5.css.map",
+    "main.0dd09420.js.map": "/WatchWire/static/js/main.0dd09420.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe1564a5.css",
+    "static/js/main.0dd09420.js"
+  ]
+}
